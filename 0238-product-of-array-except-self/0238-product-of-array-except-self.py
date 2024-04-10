@@ -1,3 +1,4 @@
+import numpy as np
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n=len(nums)
@@ -8,7 +9,8 @@ class Solution:
         for i in range(1,n):
             prodLeft[i]=prodLeft[i-1]*nums[i-1]
             prodRight[n-i-1]=prodRight[n-i]*nums[n-i]
-        commonProd=[0]*n
-        for i in range(n):
-            commonProd[i]=prodLeft[i]*prodRight[i]
-        return(commonProd)
+        return(np.multiply(prodLeft,prodRight).tolist())
+        # commonProd=[0]*n
+        # for i in range(n):
+        #     commonProd[i]=prodLeft[i]*prodRight[i]
+        # return(commonProd)
