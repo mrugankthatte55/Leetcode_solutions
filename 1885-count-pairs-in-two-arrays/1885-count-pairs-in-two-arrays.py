@@ -12,9 +12,9 @@ class Solution:
         while l < r:
             if arrdiff[l]+arrdiff[r]>0:
                 ans+=(r-l)
-                r -= 1
+                r-=1
             else:
-                l += 1
+                l+=1
             
         
         
