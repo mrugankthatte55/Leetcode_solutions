@@ -2,7 +2,7 @@ class Solution:
     def longestPalindrome(self, s: str) -> int:
         d={}
         ans=0
-        f=1
+        f=0
         for i in s:
             if i in d:
                 d[i]+=1
@@ -13,7 +13,5 @@ class Solution:
                 ans+=d[i]
             else:
                 ans+=(d[i]-1)
-                f=0
-        if f==0:
-            return ans+1
-        return ans
+                f=1
+        return ans+f
