@@ -3,11 +3,12 @@ class Solution:
         dictionary.sort()
         s=list(sentence.split(" "))
         for i in range(len(s)):
-            f=0
+            # f=0
             for j in dictionary:
-                if s[i][:len(j)] == j and f == 0:
+                # if s[i][:len(j)] == j and f == 0:
+                if s[i][:len(j)] == j:
                     s[i]=j
-                    f=1
+                    # f=1
         listToStr = ' '.join([str(c) for c in s])
         return listToStr
 # Gives TLE
