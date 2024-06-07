@@ -14,3 +14,6 @@ class Solution:
 # regex=re.compile('^hello')
 # if re.match(regex, somestring):
 #     print("Yes")
+
+
+# can also use string.startswith()
