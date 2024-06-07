@@ -1,12 +1,12 @@
 class Solution:
     def replaceWords(self, dictionary: List[str], sentence: str) -> str:
-        dictionary.sort()
+        dictionary=set(dictionary)
         s=list(sentence.split(" "))
         for i in range(len(s)):
             for j in dictionary:
                 if s[i][:len(j)] == j:
                     s[i]=j
-                    break
+                    
         return " ".join(s)
         
         # d={}
