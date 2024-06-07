@@ -6,7 +6,7 @@ class Solution:
             for j in dictionary:
                 if s[i][:len(j)] == j:
                     s[i]=j
-        return ' '.join([str(c) for c in s])
+        return " ".join(s)
         
         # d={}
         # for i in dictionary:
