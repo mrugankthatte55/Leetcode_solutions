@@ -23,7 +23,7 @@ class Solution:
             for i in range(len(s)):
                 if s[i][:len(j)] == j:
                     s[i]=j
-        listToStr = ' '.join([str(c) for c in s])
+        listToStr = " ".join(s)
         return listToStr
         
 # Gives TLE
