@@ -1,9 +1,5 @@
 class Solution:
     def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
-        # d1={}
-        # for i in range(len(arr2)):
-        #     if arr2[i] not in d1:
-        #         d1[arr2[i]]=i
         d2={}
         for i in range (len(arr1)):
             if arr1[i] in d2:
