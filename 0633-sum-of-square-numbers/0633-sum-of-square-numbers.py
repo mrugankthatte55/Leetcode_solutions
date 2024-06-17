@@ -12,9 +12,10 @@ class Solution:
         #         if x==int(x):
         #             return True
         # return False
-        d={}
+        d=set()
         for i in range(int(math.sqrt(c))+1):
-            d[i**2]=1
+            # d[i**2]=1
+            d.add(i**2)
         # print(d)
         # 0 1 2 3
         for i in d:
