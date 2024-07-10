@@ -4,11 +4,9 @@ class Solution:
         for i in logs:
             if i=="./":
                 continue
-            if i=="../":
-                if len(st)!=0:
-                    st.pop()
-            
-            else:
+            if i=="../" and len(st)!=0:
+                st.pop()
+            elif i!="../":
                 st.append(i)
             print(st)
         return len(st)
