@@ -10,4 +10,8 @@ class Solution:
                 if matrix[j][i]>m:
                     m=matrix[j][i]
             c.append(m)
-        return set(r)&set(c)
+        c=set(c)
+        for i in matrix:
+            if min(i) in c:
+                return [min(i)]
+        return []
