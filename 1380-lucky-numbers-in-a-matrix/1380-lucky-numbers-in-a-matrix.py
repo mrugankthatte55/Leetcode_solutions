@@ -1,9 +1,6 @@
 class Solution:
     def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
-        r=[]
         c=[]
-        for i in matrix:
-            r.append(min(i))
         for i in range(len(matrix[0])):
             m=matrix[0][i]
             for j in range(len(matrix)):
@@ -12,6 +9,7 @@ class Solution:
             c.append(m)
         c=set(c)
         for i in matrix:
-            if min(i) in c:
-                return [min(i)]
+            x=min(i)
+            if x in c:
+                return [x]
         return []
