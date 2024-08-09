@@ -1,11 +1,18 @@
 class Solution:
     def numMagicSquaresInside(self, grid: List[List[int]]) -> int:
-        def checkMagic(mat: List[List[int]]):
-            s=set([])
+        def checkMagic(mat: List[List[int]], magic: int):
+            # magic=3
+            s1=set([])
+            check=0
+            s2=set([])
+            
             for i in mat:
                 for j in i:
-                    s.add(j)
-            if s!={1,2,3,4,5,6,7,8,9}:
+                    s1.add(j)
+                    check+=1
+                    s2.add(check)
+
+            if s1!=s2:
                 return False
             r1=sum(mat[0])
             r2=sum(mat[1])
@@ -21,23 +28,24 @@ class Solution:
             if r1==r2==r3==d1==d2==c1==c2==c3:
                 return True
             return False
+        magic=3
         ans=0
         n=len(grid)
         m=len(grid[0])
-        if n<3 or m<3:
+        if n<magic or m<magic:
             return ans
 
         ans=0
-        for i in range(n-2):
-            for j in range(m-2):
+        for i in range(n-magic+1):
+            for j in range(m-magic+1):
                 mat=[]
-                for k in range(3):
+                for k in range(magic):
                     temp=[]
-                    for l in range(3):
+                    for l in range(magic):
                         temp.append(grid[i+k][j+l])
                     mat.append(temp)
                 # mat=[[grid[i][j], grid[i][j+1], grid[i][j+2]], [grid[i+1][j], grid[i+1][j+1], grid[i+1][j+2]], [grid[i+2][j], grid[i+2][j+1], grid[i+2][j+2]]]
-                if checkMagic(mat):
+                if checkMagic(mat, magic):
                     ans+=1
         return ans
         
