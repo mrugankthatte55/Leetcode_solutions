@@ -5,12 +5,12 @@ class Solution:
             return []
         ans=[missing//n]*n
         missing2=missing-sum(ans)
-        print(missing2)
-        if missing2<0:
-            return []
+        # print(missing2)
+        # if missing2<0:
+        #     return []
         for i in range(missing2):
             ans[i%n]+=1
-        if max(ans)>6:
-            return []
+        # if max(ans)>6:
+        #     return []
         return ans        
     
