@@ -5,10 +5,10 @@ class Solution:
         n=1
         if n%k==0:
             return 1
-        for i in range (0,k):
+        for i in range (2,k+1):
             n*=10
             n+=1
             if n%k==0:
-                return i+2
+                return i
         return -1
         
