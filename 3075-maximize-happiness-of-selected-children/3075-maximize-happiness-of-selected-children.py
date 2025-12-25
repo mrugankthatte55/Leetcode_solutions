@@ -4,10 +4,9 @@ class Solution:
         h=0
         t=0
         for i in range(0,len(happiness)):
-            if t==k:
+            if i==k:
                 return h
-            if happiness[i]-t<0:
+            if happiness[i]-i<0:
                 return h
-            h+=happiness[i]-t
-            t+=1
+            h+=happiness[i]-i
         return h
