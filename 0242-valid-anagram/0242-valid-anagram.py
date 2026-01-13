@@ -3,8 +3,10 @@ class Solution:
         # if sorted(s)==sorted(t):
         #     return True
         # return False
+        if len(s)!=len(t):
+            return False
         ds={}
-        dt={}
+
 
         for i in range(len(s)):
             if s[i] in ds:
