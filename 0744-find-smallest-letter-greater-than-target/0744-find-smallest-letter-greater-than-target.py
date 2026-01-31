@@ -15,10 +15,11 @@ class Solution:
         #     if c>target:
         #         return c
         # return letters[0]
+        l=set(letters)
         target=ord(target)
-        c=Counter(letters)
+        # c=Counter(letters)
         ans=ord(letters[0])
         for i in range(target+1,ord('z')+1):
-            if chr(i) in c:
+            if chr(i) in l:
                 return chr(i)
         return chr(ans)
